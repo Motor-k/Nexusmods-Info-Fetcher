@@ -12,6 +12,50 @@ GUI Version:
 
 ![Image of the gui version of nexusmods information fetcher](https://i.imgur.com/L2ZSeQj.png)
 
+How to generate an api key: 
+
+🛠️ Steps
+
+1. Log in to Nexus Mods
+
+Navigate to the Nexus Mods website: https://www.nexusmods.com/.
+
+Click Sign In at the top-right corner and enter your credentials.
+
+
+
+2. Open Your Profile Settings
+
+After logging in, click on your username in the top-right corner.
+
+Select Profile from the dropdown menu.
+
+
+
+3. Access the API Key Section
+
+In your profile, click on the API Keys tab on the left sidebar.
+
+If you don't see it, make sure you're signed in and have verified your email.
+
+
+
+4. Generate Your API Key
+
+On the API Keys page, click Create New API Key.
+
+Provide a name or description for your key (e.g., "My Mod Manager").
+
+Click Generate.
+
+
+
+5. Copy and Store Your API Key
+
+Your new API key will be displayed. Copy it by clicking the Copy icon.
+
+Important: Treat this key like a password. Never share it publicly.
+
 ---
 
 ## Libraries Used
