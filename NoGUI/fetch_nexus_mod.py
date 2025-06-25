@@ -4,6 +4,8 @@ import configparser
 import requests
 import sys
 import os
+from io import BytesIO
+from PIL import Image
 
 API_BASE = "https://api.nexusmods.com/v1/games"
 
@@ -18,11 +20,20 @@ def fetch_mod(api_key: str, gamename: str, mod_id: int) -> dict:
     return resp.json()
 
 def download_screenshot(picture_url: str, out_path: str = "screenshot.png"):
-    resp = requests.get(picture_url, stream=True)
+    """
+    Download the image via requests, then re-save it through Pillow
+    to guarantee a clean, standards-compliant PNG.
+    """
+    resp = requests.get(picture_url)
     resp.raise_for_status()
-    with open(out_path, "wb") as f:
-        for chunk in resp.iter_content(1024):
-            f.write(chunk)
+
+    # Load into PIL and re‐save
+    img = Image.open(BytesIO(resp.content))
+    # (optional) convert to RGBA to ensure alpha is correct:
+    if img.mode not in ("RGB", "RGBA"):
+        img = img.convert("RGBA")
+
+    img.save(out_path, format="PNG", optimize=True)
 
 def write_modinfo(data: dict, gamename: str, mod_id: int, out_path: str = "modinfo.ini"):
     cfg = configparser.ConfigParser()
