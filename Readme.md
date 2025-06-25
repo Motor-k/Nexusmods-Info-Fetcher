@@ -2,7 +2,7 @@
 
 `Nexusmods information fetcher` is a simple python+gui program that allows the user to specify a game name and a mod id and automatically get its information from [nexusmods](https://www.nexusmods.com/) for use in conjunction with [fluffy mod manager](https://www.nexusmods.com/site/mods/818)
 
-A program to allow automatically creating mods with multiple options is under development.
+~~A program to allow automatically creating mods with multiple options is under development.~~ The program can be found [here](https://github.com/Motor-k/Fluffy-Automated-Option-Generator)
 
 This document explains the libraries used by the NexusMods Information Fetcher program and how to install and run it.
 
@@ -31,6 +31,7 @@ Make sure you have Python 3.6+ installed. Then install the third-party dependenc
 ```bash
 pip install -r requirements.txt
 ```
+or `install requirements.bat`
 
 The provided **requirements.txt** should contain:
 
