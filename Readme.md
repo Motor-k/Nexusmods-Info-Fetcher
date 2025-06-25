@@ -71,6 +71,8 @@ Important: Treat this key like a password. Never share it publicly.
 - **configparser**
   - Part of the Python standard library; used to generate the `modinfo.ini` file with the requested fields.
 
+- **Pillow**
+  - Used to normalize the images downloaded from nexusmods to prevent fluffy mod manager from having load preview errors.
 
 ---
 
@@ -87,6 +89,7 @@ The provided **requirements.txt** should contain:
 
 ```text
 requests>=2.25.1
+Pillow>=9.0.0
 ```
 
 ---
